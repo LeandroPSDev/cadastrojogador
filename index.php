@@ -10,7 +10,7 @@
     <!--MENU-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Mercado de jogadores</a>
+    <a class="navbar-brand" href="#">Biblioteca</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,11 +20,11 @@
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="?page=novo">Novo jogador</a>
+          <a class="nav-link" href="?page=novo">Novo livro</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="?page=listar">Listar jogadores</a>
+          <a class="nav-link" href="?page=listar">Listar livros</a>
         </li>
       </ul>      
     </div>
@@ -44,10 +44,13 @@
                         break;
                     case "listar":
                         include("listar.php");
+                        break;
                     case "salvar":
                         include("salvar.php");
+                        break;
                     case "editar":
                         include("editar.php");
+                        break;
                     #default:
                     #print "Bem vindo!";
                 }

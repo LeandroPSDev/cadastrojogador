@@ -1,4 +1,4 @@
-<h1>Novo jogador</h1>
+<h1>Novo livro</h1>
 
 <form action="?page=salvar" method="POST">
 
@@ -20,7 +20,7 @@
     </div>
 
     <div class="mb-3">
-        <textarea name="descricao" placeholder="Descreva o jogador" class="form-control"></textarea>
+        <textarea name="descricao" placeholder="Descrição do livro" class="form-control"></textarea>
     </div>
 
     <div class="mb-3">
