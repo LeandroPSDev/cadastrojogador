@@ -37,6 +37,3 @@
     </div>
     
 </form>
-
-<a href="javascript:history.back(1)" class="btn btn-secondary">Voltar</a>
-
