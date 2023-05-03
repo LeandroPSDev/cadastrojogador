@@ -29,7 +29,7 @@
     </div>
 
     <div class="mb-3">
-        <textarea name="descricao" placeholder="Descreva o jogador" class="form-control"><?php print $row->nome; ?></textarea>
+        <textarea name="descricao" placeholder="Descreva o jogador" class="form-control"><?php print $row->descricao; ?></textarea>
     </div>
 
     <div class="mb-3">

@@ -22,14 +22,14 @@
             print "<tr>";
             print "<td>".$row->id."</td>";
             print "<td>".$row->nome."</td>";
-            print "<td>".$row->valor."</td>";
-            print "<td>".$row->descricao."</td>";
-            print "<td>".$row->ativo."</td>";
+            print "<td>R$".$row->valor."</td>";
+            print "<td>".substr($row->descricao, 0, 40)."...</td>";
+            print "<td style='text-align:center;'>".($row->ativo == "Y" ? "<img src='imagens/disponivel.png' />" : "<img src='imagens/indisponivel.png' />")."</td>";
             
             print "<td>
             
-            <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>
-            <button onclick=\"if(confirm('Tem certeza que deseja excluir o livro: ".$row->nome."?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn btn-danger'>Excluir</button>
+            <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn'><img src='imagens/editar.png' alt='Editar' title='Editar' /></button>
+            <button onclick=\"if(confirm('Tem certeza que deseja excluir o livro: ".$row->nome."?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn'><img src='imagens/excluir.png' alt='Excluir' title='Excluir' /></button>
             </td>";
             
             print "</tr>";
