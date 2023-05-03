@@ -14,8 +14,8 @@
             print "<th>Nome</th>";
             print "<th>Valor</th>";
             print "<th>Descrição</th>";
-            print "<th>Ativo</th>";
-            print "<th>Ações</th>";
+            print "<th style='text-align:center;'>Ativo</th>";
+            print "<th style='text-align:center;'>Ações</th>";
             print "</tr>";
             
         while($row = $res->fetch_object()){
@@ -26,7 +26,7 @@
             print "<td>".substr($row->descricao, 0, 40)."...</td>";
             print "<td style='text-align:center;'>".($row->ativo == "Y" ? "<img src='imagens/disponivel.png' />" : "<img src='imagens/indisponivel.png' />")."</td>";
             
-            print "<td>
+            print "<td style='text-align:center;'>
             
             <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn'><img src='imagens/editar.png' alt='Editar' title='Editar' /></button>
             <button onclick=\"if(confirm('Tem certeza que deseja excluir o livro: ".$row->nome."?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn'><img src='imagens/excluir.png' alt='Excluir' title='Excluir' /></button>
