@@ -2,29 +2,26 @@
 
 <?php 
 
-    $sql = "SELECT * FROM livros where id";
+    #$sql = "SELECT * FROM livros ORDER BY 'valor'";
+    $sql = "SELECT id, nome, valor, descricao, ativo FROM livros ORDER BY valor asc";
     $res = $conn->query($sql);
     $qtd = $res->num_rows;
 
     if(isset($qtd)){
         print "<table class='table table-hover table-striped table-bordered'>";
 
-            print "<tr>";
-            print "<th>#</th>";
+            print "<tr>";            
             print "<th>Nome</th>";
             print "<th>Valor</th>";
-            print "<th>Descrição</th>";
             print "<th style='text-align:center;'>Ativo</th>";
             print "<th style='text-align:center;'>Ações</th>";
             print "</tr>";
             
         while($row = $res->fetch_object()){
             print "<tr>";
-            print "<td>".$row->id."</td>";
             print "<td>".$row->nome."</td>";
             print "<td>R$".$row->valor."</td>";
-            print "<td>".substr($row->descricao, 0, 40)."...</td>";
-            print "<td style='text-align:center;'>".($row->ativo == "Y" ? "<img src='imagens/disponivel.png' />" : "<img src='imagens/indisponivel.png' />")."</td>";
+            print "<td style='text-align:center;'>".($row->ativo == "Y" ? "<img src='imagens/disponivel.png' alt='Em estoque' title='Em estoque' />" : "<img src='imagens/indisponivel.png' alt='Em falta' title='Em falta' />")."</td>";
             
             print "<td style='text-align:center;'>
             
