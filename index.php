@@ -46,8 +46,10 @@
                         include("listar.php");
                     case "salvar":
                         include("salvar.php");
-                    default:
-                    print "Bem vindo!";
+                    case "editar":
+                        include("editar.php");
+                    #default:
+                    #print "Bem vindo!";
                 }
             ?>
         </div>
