@@ -18,7 +18,6 @@
                 print "<script>location.href='?page=listar';</script>";
             }
 
-
             break;
             
         case 'editar':           
@@ -28,8 +27,6 @@
             $ativo = $_POST["ativo"];
 
             $sql = "UPDATE livros SET nome = '{$nome}', descricao = '{$descricao}', valor = '{$valor}', ativo = '{$ativo}' WHERE id=".$_REQUEST["id"];
-            #$sql = "UPDATE livros SET nome_da_coluna1 = valor_da_coluna1, nome_da_coluna2 = valor_da_coluna2  WHERE condição";
-            #$sql = "UPDATE livros SET nome='Mariane TTT' WHERE id=5";                  
             $res = $conn->query($sql);
 
             if($res==true){
@@ -40,10 +37,8 @@
                 print "<script>location.href='?page=listar';</script>";
             }
 
-
-
-
             break;
+
         case 'excluir':
             
             $sql = "DELETE FROM livros WHERE id=".$_REQUEST["id"];
@@ -58,8 +53,8 @@
                 print "<script>location.href='?page=listar';</script>";
             }
 
-
             break;
+            
     }
 
 ?>

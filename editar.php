@@ -1,39 +1,48 @@
 <h1>Editar livro</h1>
 
 <?php
-
     $sql = "SELECT * FROM livros WHERE id=".$_REQUEST["id"];
-    $res = $conn->query($sql);
-    $row = $res->fetch_object();
+    $livros = $conn->query($sql);
 
+    foreach($livros as $livro){
+        $id = $livro['id'];
+        $nome = $livro['nome'];
+        $valor = $livro['valor'];
+        $descricao = $livro['descricao'];
+        $ativo = $livro['ativo'];
+    }
 ?>
 
-<form action="?page=salvar" method="POST">
+<form id="livraria-formulario" action="?page=salvar" method="POST">
 
-<input type="hidden" name="acao" value="editar" />
-<input type="hidden" name="id" value="<?php print $row->id; ?>" />
+    <input type="hidden" name="acao" value="editar" />
+    <input type="hidden" name="id" value="<?php echo $id; ?>" />
 
-<div class="mb-3">
-        <input type="text" name="nome" value="<?php print $row->nome; ?>" placeholder="Digite o nome" class="form-control" />
+    <div class="livraria-form">
+        <input type="text" name="nome" value="<?php echo $nome; ?>" placeholder="Digite o nome" class="form-control" />
     </div>
 
-    <div class="mb-3">
-        <input type="text" name="valor" value="<?php print $row->valor; ?>" placeholder="Digite o valor" class="form-control" />
+    <div class="livraria-form">
+        <input type="text" name="valor" value="<?php echo $valor; ?>" placeholder="Digite o valor" class="form-control" />
     </div>
 
-    <div class="mb-3">
+    <div class="livraria-form">
         <select name="ativo" class="form-control">
-            <option value="Y" <?php echo ($row->ativo == "Y" ? "selected" : ""); ?>>Ativo</option>
-            <option value="N" <?php echo ($row->ativo == "N" ? "selected" : ""); ?>>Inativo</option>
+            <option value="Y" <?php echo ($ativo == "Y" ? "selected" : ""); ?>>Ativo</option>
+            <option value="N" <?php echo ($ativo == "N" ? "selected" : ""); ?>>Inativo</option>
         </select>
     </div>
 
-    <div class="mb-3">
-        <textarea name="descricao" placeholder="Descreva o jogador" class="form-control"><?php print $row->descricao; ?></textarea>
+    <div class="livraria-form">
+        <textarea name="descricao" placeholder="Descreva o jogador" class="form-control"><?php print $descricao; ?></textarea>
     </div>
 
-    <div class="mb-3">
+    <div class="livraria-form">
         <button type="submit" class="btn btn-primary">Editar</button>
     </div>
     
 </form>
+
+<div style="clear:both;"></div>
+
+<div style="float:right;"><a href="javascript:history.back(1)" class="btn btn-secondary">Voltar</a></div>
