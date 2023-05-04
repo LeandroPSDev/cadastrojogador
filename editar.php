@@ -38,11 +38,9 @@
     </div>
 
     <div class="livraria-form">
-        <button type="submit" class="btn btn-primary">Editar</button>
+        <button type="submit" class="btn btn-primary">Salvar</button>
     </div>
     
 </form>
 
-<div style="clear:both;"></div>
-
-<div style="float:right;"><a href="javascript:history.back(1)" class="btn btn-secondary">Voltar</a></div>
+<div class="livraria-voltar"><a href="javascript:history.back(1)" class="btn btn-secondary">Voltar</a></div>

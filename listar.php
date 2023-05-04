@@ -35,3 +35,5 @@
             echo "Não existem livros cadastrados.";
     }
 ?>
+
+<div class="livraria-voltar"><a href="javascript:history.back(1)" class="btn btn-secondary">Voltar</a></div>
