@@ -1,6 +1,7 @@
 <?php
 
     switch ($_REQUEST["acao"]) {
+
         case 'cadastrar':
             $nome = $_POST["nome"];
             $valor = $_POST["valor"];
@@ -39,10 +40,8 @@
 
             break;
 
-        case 'excluir':
-            
+        case 'excluir':            
             $sql = "DELETE FROM livros WHERE id=".$_REQUEST["id"];
-
             $res = $conn->query($sql);
 
             if($res==true){
@@ -53,8 +52,7 @@
                 print "<script>location.href='?page=listar';</script>";
             }
 
-            break;
-            
+            break;            
     }
 
 ?>

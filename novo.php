@@ -2,9 +2,9 @@
 
 <form id="livraria-formulario" action="?page=salvar" method="POST">
 
-<input type="hidden" name="acao" value="cadastrar" />
+    <input type="hidden" name="acao" value="cadastrar" />
 
-<div class="livraria-form">
+    <div class="livraria-form">
         <input type="text" name="nome" placeholder="Digite o nome" class="form-control" required />
     </div>
 
