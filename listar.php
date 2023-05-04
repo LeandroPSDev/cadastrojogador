@@ -5,7 +5,7 @@
     $livros = $conn->query($sql);
 ?>
 
-    <?php if(isset($livros)){ ?>
+    <?php if(isset($livros) or $livros == ""){ ?>
         <table>
             <tr>      
                 <th>Nome</th>
@@ -29,7 +29,6 @@
 
         </table>
 
-    <?php }else{ echo "Não existem livros cadastrados."; }
-?>
+    <?php } ?>
 
 <div class="livraria-voltar"><a href="javascript:history.back(1)" class="btn btn-secondary">Voltar</a></div>
