@@ -54,7 +54,7 @@
         </div>
 
         <footer>
-            <a href="https://www.linkedin.com/in/leandrops-dev/" target="_blank">Leandro Pires dos Santos</a> | Teste Estágio de desenvolvimento - <a href="https://www.oaktecnologia.com/" target="_blank">Oak Tecnologia</a>
+            <a href="#">Cadastro livros</a>
         </footer>
    
     </body>
